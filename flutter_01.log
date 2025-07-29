@@ -1,0 +1,83 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FileSystemException: FileSystemException: writeFrom failed, path = 'C:\Users\84976\AppData\Local\Temp\flutter_tools.12dc90eb\flutter_tools.10d1f0b4\web_entrypoint.dart' (OS Error: There is not enough space on the disk.
+, errno = 112)
+
+```
+#0      _RandomAccessFile.writeFromSync (dart:io/file_impl.dart:873:7)
+#1      _File.writeAsBytesSync (dart:io/file_impl.dart:606:14)
+#2      _File.writeAsStringSync (dart:io/file_impl.dart:628:5)
+#3      ForwardingFile.writeAsStringSync (package:file/src/forwarding/forwarding_file.dart:147:16)
+#4      ResidentWebRunner._generateEntrypoint (package:flutter_tools/src/isolated/resident_web_runner.dart:486:14)
+<asynchronous suspension>
+#5      ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:515:16)
+<asynchronous suspension>
+#6      ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:287:41)
+<asynchronous suspension>
+#7      asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:24)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.10.5, on Microsoft Windows [Version 10.0.22631.5472], locale en-US)
+    • Flutter version 2.10.5 at D:\flutter_windows_2.10.5-stable\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 5464c5bac7 (3 years, 3 months ago), 2022-04-18 09:55:37 -0700
+    • Engine revision 57d3bac3dd
+    • Dart version 2.16.2
+    • DevTools version 2.9.2
+
+[!] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at C:\Users\84976\AppData\Local\Android\sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[!] Visual Studio - develop for Windows (Visual Studio Professional 2022 17.11.5)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Professional
+    • Visual Studio Professional 2022 version 17.11.35327.3
+    ✗ Visual Studio is missing necessary components. Please re-run the Visual Studio installer for the "Desktop development with C++"
+      workload, and include these components:
+        MSVC v142 - VS 2019 C++ x64/x86 build tools
+         - If there are multiple build tool versions available, install the latest
+        C++ CMake tools for Windows
+        Windows 10 SDK
+
+[!] Android Studio (version 2025.1.1)
+    • Android Studio at D:\New folder
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    ✗ Unable to find bundled Java version.
+    • Try updating or re-installing Android Studio.
+
+[✓] VS Code (version 1.102.2)
+    • VS Code at C:\Users\84976\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.114.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.22631.5472]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 121.0.6167.185
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 138.0.3351.95
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 3 categories.
+```
